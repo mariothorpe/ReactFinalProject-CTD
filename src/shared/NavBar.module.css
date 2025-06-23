@@ -1,0 +1,16 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.nav {
+    position: relative;
+    text-align: center;
+}
+
+.active {
+    color: black;
+}
+
+.inactive {
+    color: black;
+}
+
