@@ -17,18 +17,11 @@ function NavBar() {
               Home
             </NavLink>
             <NavLink
-              to="*"
+              to="/about"
               className=
               {({ isActive }) => isActive ? `${styles.link} ${styles.active}` : styles.link}
               >
                 About
-            </NavLink>
-            <NavLink
-              to="/newUser"
-              className=
-              {({ isActive }) => isActive ? `${styles.link} ${styles.active}` : styles.link}
-              >
-                Create Account
             </NavLink>
             </div>
         </nav>

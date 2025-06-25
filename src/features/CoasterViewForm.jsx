@@ -7,6 +7,8 @@ function CoasterViewForm({
     setSortField,
     queryString,
     setQueryString,
+    searchField,
+    setSearchField,
 }) {
      function preventRefresh(event) {
     event.preventDefault();
@@ -14,23 +16,30 @@ function CoasterViewForm({
   return (
     <form onSubmit={preventRefresh}>
       <div>
-        <label>Search Coaster:</label>
-        <input
-          type="text"
-          value={queryString}
-          onChange={(e) => {
-            setQueryString(e.target.value);
-          }}
-        ></input>
-        <button
-          type="button"
-          onClick={(e) => {
-            setQueryString('');
+      <label>Search By: </label>
+      <select
+          value={searchField}
+          onChange={(event) => {
+            setSearchField(event.target.value);
           }}
         >
-          Clear
-        </button>
-      </div>
+          <option value="name">Name</option>
+          <option value="park">Park</option>
+          <option value="type">Type</option>
+          <option value="height">Height</option>
+          <option value="speed">Speed</option>
+          <option value="inversions">Inversions</option>
+          <option value="minheightreq">Minimum Height Requirement</option>
+        </select>
+      
+        <input
+        type="text"
+        value={queryString}
+        onChange={(e) =>
+            setQueryString(e.target.value)
+        }
+        />
+        </div>
 
       <div>
         <label>Sort by: </label>
