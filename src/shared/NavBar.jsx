@@ -4,37 +4,34 @@ import styles from './NavBar.module.css';
 
 
 
-function NavBar({ header }) {
+function NavBar() {
     return (
-        <div>
-        <NavBar className={styles.NavBar}/>
-        <h1 className={styles.header}>{header}</h1>
           <nav className={styles.nav}>
+            <div className={styles.links}>
             <NavLink
               to="/"
               className=
-              {({ isActive }) => isActive ? styles.active : styles.inactive}
+              {({ isActive }) => isActive ? `${styles.link} ${styles.active}` : styles.link
+    }
               >
               Home
             </NavLink>
-            <span className="separator">|</span>
             <NavLink
-              to="/about"
+              to="*"
               className=
-              {({ isActive }) => isActive ? styles.active : styles.inactive}
+              {({ isActive }) => isActive ? `${styles.link} ${styles.active}` : styles.link}
               >
                 About
             </NavLink>
-            <span className="separator">|</span>
             <NavLink
               to="/newUser"
               className=
-              {({ isActive }) => isActive ? styles.active : styles.inactive}
+              {({ isActive }) => isActive ? `${styles.link} ${styles.active}` : styles.link}
               >
                 Create Account
             </NavLink>
-          </nav>
-        </div>
+            </div>
+        </nav>
 );
 }
 

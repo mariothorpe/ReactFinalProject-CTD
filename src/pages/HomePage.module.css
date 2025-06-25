@@ -1,0 +1,12 @@
+.homePageHeading {
+    font-family: 'Arial', sans-serif;
+    font-size: 4em;
+    font-weight: bolder;
+    line-height: 1.1;
+  }
+  
+  .homePageParagraph {
+    font-size: 1.25em;
+    text-align: center;
+    font-weight: bold;
+  }
