@@ -2,6 +2,30 @@
 
 Coaster Credit Counter is a React-based web application designed to help roller coaster enthusiasts keep track of the roller coasters they have ridden. Users can log their coaster credits, view statistics, and share their progress with others.
 
+##Setting Up Airtable/Backend
+
+1. Go to www.airtable.com and create a new airtable base.
+2. Create three tables:
+    - Your newly created base should have three tables
+      - Coasters - for storing information about each roller coaster
+      - Users - for storing user login information
+      - Signups - for storing user signups
+
+3. Add fields 
+   1. Coasters table fields should be:
+      1. name(single line text)
+      2. park(single line text)
+      3. type(single line text)
+      4. height(single line text)
+      5. speed(single line text)
+      6. inversions(single line text)
+      7. minimumheightreq(single line text)
+4. Import Data From CSV
+   1. You can import data using airtable's CSV Import feature.
+      1. In each table click the dropdown -> "Import Data" -> "CSV File"
+      2. 
+      3. 
+
 ## Features
 
 - **Add Coaster Credits**: Easily add roller coasters to your personal list.
