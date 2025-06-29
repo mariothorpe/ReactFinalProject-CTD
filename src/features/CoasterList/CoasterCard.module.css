@@ -1,0 +1,44 @@
+.card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 200px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 16px;
+}
+
+.content {
+  padding: 16px;
+}
+
+.name {
+  font-size: 1.5rem;
+  margin: 0 0 8px;
+}
+
+.park {
+  font-size: 1rem;
+  margin: 0 0 8px;
+}
+
+.type {
+  font-size: 0.9rem;
+  margin: 0 0 8px;
+}
+
+.height {
+  font-size: 0.9rem;
+  margin: 0 0 8px;
+}
+.speed {
+  font-size: 0.9rem;
+  margin: 0 0 8px;
+}
+
+.inversions {
+  font-size: 0.9rem;
+}
+
+.minheightrequirement {
+  font-size: 0.9rem;
+}

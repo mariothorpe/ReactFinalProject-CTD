@@ -1,23 +1,23 @@
 import React from "react";
 
 function CoasterViewForm({
-    sortDirection,
-    setSortDirection,
-    sortField,
-    setSortField,
-    queryString,
-    setQueryString,
-    searchField,
-    setSearchField,
+  sortDirection,
+  setSortDirection,
+  sortField,
+  setSortField,
+  queryString,
+  setQueryString,
+  searchField,
+  setSearchField,
 }) {
-     function preventRefresh(event) {
+  function preventRefresh(event) {
     event.preventDefault();
   }
   return (
     <form onSubmit={preventRefresh}>
       <div>
-      <label>Search By: </label>
-      <select
+        <label>Search By: </label>
+        <select
           value={searchField}
           onChange={(event) => {
             setSearchField(event.target.value);
@@ -31,15 +31,13 @@ function CoasterViewForm({
           <option value="inversions">Inversions</option>
           <option value="minheightreq">Minimum Height Requirement</option>
         </select>
-      
+
         <input
-        type="text"
-        value={queryString}
-        onChange={(e) =>
-            setQueryString(e.target.value)
-        }
+          type="text"
+          value={queryString}
+          onChange={(e) => setQueryString(e.target.value)}
         />
-        </div>
+      </div>
 
       <div>
         <label>Sort by: </label>

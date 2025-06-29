@@ -1,10 +1,15 @@
 .paginationControls {
-    display: flex;
-    justify-content: center;
-    margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
 }
 
 .paginationPageNumber {
-    margin: 0 0.25rem;
+  margin: 0 0.25rem;
 }
 
+.coasterContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
