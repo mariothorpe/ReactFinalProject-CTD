@@ -16,7 +16,6 @@ function CoasterList({
   return (
     <div className={styles.coasterContainer}>
       {coasterList.map((coaster, index) => {
-        console.log(coaster);
         return (
           <CoasterCard
             key={index}

@@ -57,9 +57,7 @@ function App() {
       if (!resp.ok) {
         throw new Error(resp.message);
       }
-      console.log("resp: ", resp);
       const data = await resp.json();
-      console.log(data);
       const coasters = data.records.map((record) => {
         const coaster = {
           id: record.id,
@@ -73,7 +71,6 @@ function App() {
         };
         return coaster;
       });
-      console.log(coasters);
       setCoasterList([...coasters]);
     } catch (error) {
       console.log("fetching coasters error: ", error);

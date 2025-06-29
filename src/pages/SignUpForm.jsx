@@ -1,10 +1,5 @@
 import React, { useState } from 'react';
 
-// const url = `https://api.airtable.com/v0/${import.meta.env.VITE_BASE_ID3}/${
-//     import.meta.env.VITE_TABLE_NAME3
-//   }`;
-//   const token = `Bearer ${import.meta.env.VITE_PAT3}`;
-
 function SignUpForm() {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
@@ -13,10 +8,7 @@ function SignUpForm() {
   const handleSubmit = (event) => {
     event.preventDefault();
     if (username && email && password) {
-      console.log('Signup data:', { username, email, password });
-      // In a real application, you would send this data to a server
       alert('Sign up successful!');
-      // Optionally clear the form
       setUsername('');
       setEmail('');
       setPassword('');
