@@ -32,7 +32,7 @@ Coaster Credit Counter is a React-based web application designed to help roller 
     ```
 4. Start the development server:
     ```bash
-    npm start
+    npm run dev
     ```
 
 ## Usage
