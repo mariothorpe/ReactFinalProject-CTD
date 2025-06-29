@@ -5,13 +5,10 @@ Coaster Credit Counter is a React-based web application designed to help roller 
 ##Setting Up Airtable/Backend
 
 1. Go to www.airtable.com and create a new airtable base.
-2. Create three tables:
-    - Your newly created base should have three tables
+2. Create one table:
+    - Your newly created base should have one table
       - Coasters - for storing information about each roller coaster
-      - Users - for storing user login information
-      - Signups - for storing user signups
-
-3. Add fields 
+3. Add fields:
    1. Coasters table fields should be:
       1. name(single line text)
       2. park(single line text)
@@ -23,8 +20,20 @@ Coaster Credit Counter is a React-based web application designed to help roller 
 4. Import Data From CSV
    1. You can import data using airtable's CSV Import feature.
       1. In each table click the dropdown -> "Import Data" -> "CSV File"
-      2. 
-      3. 
+      2. The CSV files will be in the /data folder at the root of the projcet
+      3. Upload the correct CSV file for each table
+         1. Coasters.csv (imports all data for the Coasters table)
+5. Configure Environment Variables
+   1. Create a .env.local file in the root of the project based on the example provided below:
+
+VITE_PAT = your_airtable_personal_access_token
+VITE_BASE_ID = your_airtbale_base_id
+VITE_TABLE_COASTERS = coasters 
+
+VITE_PAT: Create a personal access token at https://airtable.com/account under Developer Hub -> Tokens
+VITE_BASE_ID: The base ID is found in the URL of your Airtable base (airtable.com/appXXXXXXXXXXX/)
+VITE_TABLE_COASTERS: The name of the table you created in step 2.
+
 
 ## Features
 
