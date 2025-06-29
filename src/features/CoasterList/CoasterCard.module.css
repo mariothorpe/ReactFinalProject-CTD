@@ -17,7 +17,7 @@
 }
 
 .park {
-  font-size: 1rem;
+  font-size: 1.2rem;
   margin: 0 0 8px;
 }
 
@@ -39,7 +39,7 @@
   font-size: 0.9rem;
 }
 
-.minheightrequirement {
+.minHeightRequirement {
   font-size: 0.9rem;
   margin: 0 0 8px;
 }

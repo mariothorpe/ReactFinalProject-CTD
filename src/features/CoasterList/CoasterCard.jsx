@@ -19,7 +19,7 @@ function CoasterCard({
         <p className={styles.height}>Height: {height} ft </p>
         <p className={styles.speed}>Speed: {speed} mph </p>
         <p className={styles.inversions}>Inversions: {inversions}</p>
-        <p className={styles.heightRequirement}>
+        <p className={styles.minHeightRequirement}>
           Minimum Height Requirement: {minheightreq} inches
         </p>
       </div>
