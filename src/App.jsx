@@ -1,6 +1,6 @@
 import "./App.css";
 import React from "react";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import NavBar from "./shared/NavBar";
 import HomePage from "./pages/HomePage";
 import About from "./pages/About";
@@ -39,50 +39,49 @@ function App() {
   const location = useLocation();
   const navigate = useNavigate();
 
+  const fetchCoasters = useCallback(async () => {
+    const options = {
+      method: "GET",
+      headers: {
+        Authorization: token,
+      },
+    };
 
+    try {
+      const resp = await fetch(
+        encodeUrl({ sortField, searchField, sortDirection, queryString }),
+        options
+      );
+
+      if (!resp.ok) {
+        throw new Error(resp.message);
+      }
+      console.log("resp: ", resp);
+      const data = await resp.json();
+      console.log(data);
+      const coasters = data.records.map((record) => {
+        const coaster = {
+          id: record.id,
+          name: record.fields.name,
+          park: record.fields.park,
+          type: record.fields.type,
+          height: record.fields.height,
+          speed: record.fields.speed,
+          inversions: record.fields.inversions,
+          minheightreq: record.fields.minheightreq,
+        };
+        return coaster;
+      });
+      console.log(coasters);
+      setCoasterList([...coasters]);
+    } catch (error) {
+      console.log("fetching coasters error: ", error);
+    }
+  }, [sortField, sortDirection, queryString, searchField, setCoasterList]);
 
   useEffect(() => {
-    const fetchCoasters = async () => {
-      const options = {
-        method: "GET",
-        headers: {
-          Authorization: token,
-        },
-      };
-
-      try {
-        const resp = await fetch(
-          encodeUrl({ sortField, searchField, sortDirection, queryString }),
-          options
-        );
-
-        if (!resp.ok) {
-          throw new Error(resp.message);
-        }
-        console.log("resp: ", resp);
-        const data = await resp.json();
-        console.log(data);
-        const coasters = data.records.map((record) => {
-          const coaster = {
-            id: record.id,
-            name: record.fields.name,
-            park: record.fields.park,
-            type: record.fields.type,
-            height: record.fields.height,
-            speed: record.fields.speed,
-            inversions: record.fields.inversions,
-            minheightreq: record.fields.minheightreq,
-          };
-          return coaster;
-        });
-        console.log(coasters);
-        setCoasterList([...coasters]);
-      } catch (error) {
-        console.log("fetching coasters error: ", error);
-      }
-    };
     fetchCoasters();
-  }, [sortField, sortDirection, queryString, searchField]);
+  }, [fetchCoasters]);
 
   useEffect(() => {
     if (location.pathname === "/") {
@@ -93,7 +92,6 @@ function App() {
       setTitle("Page Not Found");
     }
   }, [location]);
-
 
   return (
     <div>

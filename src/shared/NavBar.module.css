@@ -1,9 +1,10 @@
-.navBar {
+.nav {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 0.5em;
     align-items: center;
-    background-color: #a79242;
+    background-color: white;
     border-bottom: 3px solid #b40d0d;
     border-radius: 0.75em;
     margin-bottom: 1em;
