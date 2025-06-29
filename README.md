@@ -26,10 +26,6 @@ Coaster Credit Counter is a React-based web application designed to help roller 
 5. Configure Environment Variables
    1. Create a .env.local file in the root of the project based on the example provided below:
 
-VITE_PAT = your_airtable_personal_access_token
-VITE_BASE_ID = your_airtbale_base_id
-VITE_TABLE_COASTERS = coasters 
-
 VITE_PAT: Create a personal access token at https://airtable.com/account under Developer Hub -> Tokens
 VITE_BASE_ID: The base ID is found in the URL of your Airtable base (airtable.com/appXXXXXXXXXXX/)
 VITE_TABLE_COASTERS: The name of the table you created in step 2.
