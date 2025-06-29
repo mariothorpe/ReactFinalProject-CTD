@@ -53,7 +53,7 @@ VITE_TABLE_COASTERS: The name of the table you created in step 2.
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/your-username/CoasterCreditCounter.git
+    git clone https://github.com/ReactFinalProject-CTD.git
     ```
 2. Navigate to the project directory:
     ```bash

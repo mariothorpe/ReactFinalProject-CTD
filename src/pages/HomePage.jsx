@@ -5,6 +5,7 @@ import CoasterList from '../features/CoasterList/CoasterList';
 
 function HomePage({
   coasterList,
+  isLoading,
   sortDirection,
   setSortDirection,
   sortField,
@@ -30,7 +31,10 @@ function HomePage({
         searchField={searchField}
         setSearchField={setSearchField}
       />
-      <CoasterList coasterList= {coasterList} />
+      <CoasterList 
+      coasterList= {coasterList}
+      isLoading={isLoading}
+       />
     </div>
   );
 }

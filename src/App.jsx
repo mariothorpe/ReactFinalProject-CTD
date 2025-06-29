@@ -29,6 +29,7 @@ const encodeUrl = ({ sortField, searchField, sortDirection, queryString }) => {
 };
 function App() {
   const [coasterList, setCoasterList] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState("");
   const [sortField, setSortField] = useState("type");
   const [searchField, setSearchField] = useState("name");
@@ -76,8 +77,11 @@ function App() {
       setCoasterList([...coasters]);
     } catch (error) {
       console.log("fetching coasters error: ", error);
+    } finally {
+      setIsLoading(false);
     }
-  }, [sortField, sortDirection, queryString, searchField, setCoasterList]);
+
+  }, [sortField, sortDirection, queryString, searchField, setCoasterList, setIsLoading]);
 
   useEffect(() => {
     fetchCoasters();
@@ -102,6 +106,7 @@ function App() {
           element={
             <HomePage
               coasterList={coasterList}
+              isLoading={isLoading}
               sortDirection={sortDirection}
               setSortDirection={setSortDirection}
               sortField={sortField}

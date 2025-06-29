@@ -10,12 +10,16 @@ function CoasterList({
   handleNextPage,
   paginatedCoasterList,
 }) {
+  if (isLoading) {
+    return <p>Coaster list is loading...</p>;
+  }
   return (
     <div className={styles.coasterContainer}>
-      {coasterList.map((coaster) => {
+      {coasterList.map((coaster, index) => {
         console.log(coaster);
         return (
           <CoasterCard
+            key={index}
             name={coaster.name}
             park={coaster.park}
             type={coaster.type}
