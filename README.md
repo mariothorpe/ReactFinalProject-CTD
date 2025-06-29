@@ -28,7 +28,7 @@ Coaster Credit Counter is a React-based web application designed to help roller 
 
 VITE_PAT: Create a personal access token at https://airtable.com/account under Developer Hub -> Tokens
 VITE_BASE_ID: The base ID is found in the URL of your Airtable base (airtable.com/appXXXXXXXXXXX/)
-VITE_TABLE_COASTERS: The name of the table you created in step 2.
+VITE_TABLE_NAME: The name of the table you created in step 2.(Coasters)
 
 
 ## Features
