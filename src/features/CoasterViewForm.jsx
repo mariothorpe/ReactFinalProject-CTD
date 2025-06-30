@@ -1,4 +1,22 @@
 import React, { useState, useEffect } from 'react';
+import styled from 'styled-components';
+
+const StyledForm = styled.form`
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: .50em;
+margin-bottom: 1em;
+padding: 1em;
+font-size: 1em;
+font-weight: bold;
+`;
+
+const FilterWrap = styled.div`
+  display: flex;
+  gap: 1em;
+  flex-wrap: wrap;
+`;
 
 
 function CoasterViewForm({
@@ -27,8 +45,8 @@ function CoasterViewForm({
     event.preventDefault();
   }
   return (
-    <form onSubmit={preventRefresh}>
-      <div>
+    <StyledForm onSubmit={preventRefresh}>
+        <FilterWrap>
         <label> Search Coasters By: </label>
         <select
           value={searchField}
@@ -57,9 +75,9 @@ function CoasterViewForm({
         >
           Reset
         </button>
-      </div>
+      </FilterWrap>
 
-      <div>
+      <FilterWrap>
         <label> Sort Coasters By: </label>
         <select
           value={sortField}
@@ -86,8 +104,8 @@ function CoasterViewForm({
           <option value="asc">Ascending</option>
           <option value="desc">Descending</option>
         </select>
-      </div>
-    </form>
+        </FilterWrap>
+    </StyledForm>
   );
 }
 

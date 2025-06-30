@@ -40,6 +40,8 @@ function App() {
   const [title, setTitle] = useState("");
   const location = useLocation();
   const navigate = useNavigate();
+ 
+
 
   const fetchCoasters = useCallback(async () => {
     const options = {
@@ -94,6 +96,7 @@ function App() {
       setTitle("Page Not Found");
     }
   }, [location]);
+
 
   return (
     <div>
