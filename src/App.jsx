@@ -6,6 +6,7 @@ import HomePage from "./pages/HomePage";
 import About from "./pages/About";
 import Signup from "./pages/SignUpForm";
 import Login from "./pages/LoginForm";
+import PageNotFound from "./pages/PageNotFound";
 import {
   useLocation,
   useNavigate,
@@ -122,6 +123,8 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/*" element={<PageNotFound />} />
+        <Route path="/pagenotfound" element={<HomePage />} />
       </Routes>
     </div>
   );

@@ -6,9 +6,9 @@ function PageNotFound() {
     return (
         <div className ={styles.pageNotFound}>
         <p className ={styles.notFoundParagraph}>404: Page Not Found</p>
-        <Link to="/" className={styles.notFoundLink}>
+        <a href="/" className={styles.notFoundLink}>
         Return To The Homepage
-        </Link>
+        </a>
     </div>
 );
 }
