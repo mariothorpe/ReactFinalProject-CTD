@@ -1,4 +1,4 @@
-div{
+div {
     justify-content: center;
     text-align: center;
     font-family: Arial, sans-serif;
@@ -8,13 +8,11 @@ div{
 }
 
 
-p{
+p {
     padding: 5px;
     background-color: #f0f0f0;
-    border-radius: 5px;
     font-family: Arial, sans-serif;
     font-weight: bold;
-    border: 5px solid black;
-    border-style: groove;  
-    border-radius: 3px;
+    border: 8px groove pink;
+    margin-top: 10px;
 }
